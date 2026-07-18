@@ -48,6 +48,6 @@ Standard maintenance practices now maintain the underlying registry. Logging vis
 - **Discrepancy log:** flags source conflicts at the point of ingestion. Resolve to build an accurate database.
 - **Issue flagging:** ties a real-world concern (a failing inverter, damaged fencing) directly to the affected component, notified to the team.
 - **Maintenance logging:** records visits, repairs, and replacements against the registry. A maintenance log which maintains the accuracy of all datasources keeping the as-built record aligned with what's actually installed.
-- **Historical database** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
+- **Historical database:** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
 
 *Future Expansions and Features also Planned*
