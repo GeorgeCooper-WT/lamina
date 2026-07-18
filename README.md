@@ -13,20 +13,37 @@
 <br>
 
 ## The Problem
-In the solar sector, managing infrastructure configurations, telemetry data, and grid states is messy and fragmented. Teams rely on static spreadsheets and siloed software to track massive, evolving energy grids. When a configuration breaks or data desynchronizes across solar fields, finding out *what* changed, *when* it happened, and *who* did it is a manual, error-prone nightmare.
+Utility-scale solar sites are documented in pieces. Those pieces don't talk to each other.
+
+A Single Line Diagram (SLD) is drawn once, typically as-built at commissioning. A Bill of Materials (BOM) is written separately, often by a different team, at a different time. As the site ages, maintenance logs record what's actually been repaired, replaced, or reconfigured, but that record lives in isolation too, rarely making its way back into the original SLD or BOM.
+
+The result: three sources of truth, each fragmented and frozen at a different moment, none of them reconciled with the others.
+
+Over time, this gap compounds. A component fails and gets replaced, the maintenance log says so, but the SLD still shows the original part. A discrepancy between the SLD and BOM goes unnoticed at commissioning and is never corrected. Multiply this across hundreds of transformers, inverters, and combiner boxes over a site's operating life, and the honest answer to "what does this site actually look like right now?" stops being a simple lookup, it becomes an investigation.
+
+That investigation is expensive. It slows down maintenance, complicates audits, creates risk during ownership transfers, and means asset managers are often making decisions on data that was accurate once, but isn't anymore.
+
+**Lamina exists to close that gap.**
 
 <br>
 
 ## How Lamina Works
-Lamina treats solar grid configurations and data pipelines the same way software engineers treat source code: with strict, immutable version control. 
+1. Ingest what you already have.
+SLDs, BOMs, and maintenance logs — as PDFs, scanned drawings, or spreadsheets, in whatever format they currently exist. Lamina reads them directly using vision-language models and OCR, with no manual re-entry required.
+2. Reconcile the sources against each other.
+Documents are cross-referenced against one another as they're read. Where sources agree, that data is trusted. Where they conflict — or where a component appears in one source but not another — it's surfaced for a human to confirm the correct value. This keeps onboarding fast, without asserting certainty the extraction doesn't actually have.
+3. Build one structured registry.
+Reconciled data is written into a relational database that preserves the site's real electrical hierarchy: transformers → inverters → DC combiners → strings. The output isn't a document — it's a live, queryable model of the site as it actually stands.
+4. Maintain the Registry.
+Standard maintenance practices now maintain the underlying registry. Logging visits, repairs, and replacements automatically keeps site documentation up to date and prevents data drift, without a new dedicated workflow.
 
-* **Branch & Test:** Engineers can create experimental branches of grid configurations to test changes safely without touching the live environment.
-* **Track Every Change:** Every modification to telemetry or system parameters is logged in a clean, chronological commit history.
-* **Instant Rollbacks:** If a new operational deployment fails or drops grid efficiency, teams can revert to the last stable state with a single click.
+### Features Built on the Registry
 
-<br>
+**Topology view:** a navigable map of the site's full electrical structure, down to individual component specs.
+**Live Bill of Materials:** reflects the current registry state, configurable exports on demand. Export specific sub-sections
+**Discrepancy log:** flags source conflicts at the point of ingestion. Resolve to build an accuracte database.
+**Issue flagging:** ties a real-world concern (a failing inverter, damaged fencing) directly to the affected component, notified to the team.
+**Maintenance logging:** records visits, repairs, and replacements against the registry. A maintenance log which maintains the accuracy of all datasources keeping the as-built record aligned with what's actually installed.
+**Historical Database** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
 
-## What It Solves
-* **Single Source of Truth:** Eliminates data fragmentation across teams and contractors by unifying system states into one central repository.
-* **Risk Reduction:** Prevents costly operational downtime on physical solar assets by catching configuration conflicts before they are deployed live.
-* **Complete Auditability:** Gives project managers and engineers 100% visibility into the historical lifecycle of their energy infrastructure.
+*Future Expansions and Features also Planned*
