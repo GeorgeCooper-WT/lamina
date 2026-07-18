@@ -38,16 +38,16 @@ SLDs, BOMs, and maintenance logs — as PDFs, scanned drawings, or spreadsheets,
 Documents are cross-referenced against one another as they're read. Where sources agree, that data is trusted. Where they conflict — or where a component appears in one source but not another — it's surfaced for a human to confirm the correct value. This keeps onboarding fast, without asserting certainty the extraction doesn't actually have.
 3. Build one structured registry.
 Reconciled data is written into a relational database that preserves the site's real electrical hierarchy: transformers → inverters → DC combiners → strings. The output isn't a document — it's a live, queryable model of the site as it actually stands.
-4. Maintain the Registry.
+4. Maintain the registry.
 Standard maintenance practices now maintain the underlying registry. Logging visits, repairs, and replacements automatically keeps site documentation up to date and prevents data drift, without a new dedicated workflow.
 
 ### Features Built on the Registry
 
 - **Topology view:** a navigable map of the site's full electrical structure, down to individual component specs.
-- **Live Bill of Materials:** reflects the current registry state, configurable exports on demand. Export specific sub-sections
+- **Live bill of materials:** reflects the current registry state, configurable exports on demand. Export specific sub-sections
 - **Discrepancy log:** flags source conflicts at the point of ingestion. Resolve to build an accurate database.
 - **Issue flagging:** ties a real-world concern (a failing inverter, damaged fencing) directly to the affected component, notified to the team.
 - **Maintenance logging:** records visits, repairs, and replacements against the registry. A maintenance log which maintains the accuracy of all datasources keeping the as-built record aligned with what's actually installed.
-- **Historical Database** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
+- **Historical database** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
 
 *Future Expansions and Features also Planned*
