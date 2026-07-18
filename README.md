@@ -33,11 +33,11 @@ That investigation is expensive. It slows down maintenance, complicates audits, 
 
 ## How Lamina Works
 1. Ingest what you already have.
-SLDs, BOMs, and maintenance logs — as PDFs, scanned drawings, or spreadsheets, in whatever format they currently exist. Lamina reads them directly using vision-language models and OCR, with no manual re-entry required.
+SLDs, BOMs, and maintenance logs, as PDFs, scanned drawings, or spreadsheets, in whatever format they currently exist. Lamina reads them directly using vision-language models and OCR, with no manual re-entry required.
 2. Reconcile the sources against each other.
-Documents are cross-referenced against one another as they're read. Where sources agree, that data is trusted. Where they conflict — or where a component appears in one source but not another — it's surfaced for a human to confirm the correct value. This keeps onboarding fast, without asserting certainty the extraction doesn't actually have.
+Documents are cross-referenced against one another as they're read. Where sources agree, that data is trusted. Where they conflict, or where a component appears in one source but not another, it's surfaced for a human to confirm the correct value. This keeps onboarding fast, without asserting certainty the extraction doesn't actually have.
 3. Build one structured registry.
-Reconciled data is written into a relational database that preserves the site's real electrical hierarchy: transformers → inverters → DC combiners → strings. The output isn't a document — it's a live, queryable model of the site as it actually stands.
+Reconciled data is written into a relational database that preserves the site's real electrical hierarchy: transformers → inverters → DC combiners → strings. The output isn't a document, it's a live, queryable model of the site as it currently stands and previously stood.
 4. Maintain the registry.
 Standard maintenance practices now maintain the underlying registry. Logging visits, repairs, and replacements automatically keeps site documentation up to date and prevents data drift, without a new dedicated workflow.
 
