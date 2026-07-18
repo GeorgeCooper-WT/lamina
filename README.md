@@ -44,7 +44,7 @@ Standard maintenance practices now maintain the underlying registry. Logging vis
 ### Features Built on the Registry
 
 - **Topology view:** a navigable map of the site's full electrical structure, down to individual component specs.
-- **Live bill of materials:** reflects the current registry state, configurable exports on demand. Export specific sub-sections
+- **Live bill of materials:** reflects the current registry state, configurable exports on demand from the full site, down to specific sub-sections.
 - **Discrepancy log:** flags source conflicts at the point of ingestion. Resolve to build an accurate database.
 - **Issue flagging:** ties a real-world concern (a failing inverter, damaged fencing) directly to the affected component, notified to the team.
 - **Maintenance logging:** records visits, repairs, and replacements against the registry. A maintenance log which maintains the accuracy of all datasources keeping the as-built record aligned with what's actually installed.
