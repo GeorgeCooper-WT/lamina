@@ -51,3 +51,5 @@ Standard maintenance practices now maintain the underlying registry. Logging vis
 - **Historical database:** changes are recorded, not overwritten, every update to the registry preserves what came before. View the site as it is now, or reconstruct its state at any point in time. Version control for physical infrastructure.
 
 *Future Expansions and Features also Planned*
+
+<br>
