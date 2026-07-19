@@ -54,6 +54,11 @@ Standard maintenance practices now maintain the underlying registry. Logging vis
 
 **SLD**
 
+<p align="center">
+  <img src="assets/example_sld.png" alt="Lamina Product Overview Video" width="70%">
+  <br>
+  <em>Example SLD Input (100MWp)</em>
+</p>
 
 
 <br>
