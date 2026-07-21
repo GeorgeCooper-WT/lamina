@@ -53,12 +53,19 @@ Standard maintenance practices now maintain the underlying registry. Logging vis
 ### Example Input
 
 **SLD**
-
 <p align="center">
-  <img src="assets/example_sld.png" alt="Lamina Product Overview Video" width="70%">
+  <img src="assets/example_sld.png" alt="Example SLD" width="70%">
   <br>
   <em>Example SLD Input (100MWp)</em>
 </p>
 
+<br>
+
+**BOM**
+<p align="center">
+  <img src="assets/example_bom.png" alt="Example BOM" width="70%">
+  <br>
+  <em>Example BOM Input (100MWp)</em>
+</p>
 
 <br>
